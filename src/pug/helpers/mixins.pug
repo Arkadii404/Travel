@@ -1,0 +1,10 @@
+mixin webp(src, ext, alt)
+    picture
+        source(type="image/webp", srcset="img/" + src + '.webp')
+        |
+        |
+        img(src="img/" + src + ext, alt=alt)
+
+mixin navItem(url, name, active)
+    li.nav__item
+        a.nav__link(href=url, class={'nav__item--active': active})= name

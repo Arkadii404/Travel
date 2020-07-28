@@ -1,11 +1,107 @@
-@mixin font($font_name, $file_name, $weight, $style) {
-    @font-face {
-        font-family: $font_name;
-        font-display: swap;
-        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
-        font-weight: #{$weight};
-        font-style: #{$style};
+@import "variables";
+@import "helpers";
+@import "fonts";
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Mulish", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #000;
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    line-height: 1.4;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    font-size: 16px;
+    color: #fff;
+    font-family: Inter;
+    font-weight: 500;
+    background-color: $button;
+    border-radius: 8px;
+    padding: 10px 35px;
+    border: 2px solid $button;
+    cursor: pointer;
+    @include transition(background-color, color);
+    &:hover {
+        color: $button;
+        background-color: #fff;
+    }
+    &.stroked {
+        background-color: #fff;
+        color: $button;
+        &:hover {
+            color: #fff;
+            background-color: $button;
+        }
     }
 }
 
-@import "fonts";
+.container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    &.container--big {
+        max-width: 1220px;
+    }
+}
+
+
+
+/* HEADER =======================*/
+.header {
+    margin-top: 45px;
+    font-family: 'Inter', sans-serif;
+    &__inner {
+        @include flex;
+    }
+    .nav {
+        @include flex;
+        align-items: center;
+    }
+}
+
+.nav {
+    .button {
+        &:not(:last-child) {
+            margin-right: 18px;
+        }        
+    }
+    &__list {
+        @include flex;
+        list-style-type: none;
+    }
+    &__item {
+        margin-right: 35px;
+    }
+    &__link {
+        color: $navItem;
+        @include transition(color);
+        &.nav__item--active {
+            color: $navItemActive;
+            font-weight: 500;
+        }
+        &:hover {
+            color: $navItemActive;
+        }
+    }
+}

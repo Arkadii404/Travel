@@ -1,0 +1,15 @@
+include ../helpers/mixins
+
+- var nav = [{url: '/', name: 'Home'}, {url: '#', name: 'Destinations'}, {url: '#', name: 'About'}, {url: '#', name: 'Partner'}]
+
+header.header
+    .container.container--big
+        .header__inner  
+            .header__logo
+                +webp('logo', '.png', 'logo')
+            nav.nav
+                ul.nav__list
+                    each item in nav
+                        +navItem(item.url, item.name, item.url == pageUrl)
+                button.button.stroked Login
+                button.button Register
