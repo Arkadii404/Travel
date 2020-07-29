@@ -16,3 +16,31 @@ mixin destinatioItem(city, country, img, ext, alt)
         .destinations__text
             .destinations__city=city
             .destinations__country=country
+
+mixin sliderItem(visible, stars, quote, name, job, src, ext)
+    if visible
+        .slider__item.active
+            .item__content
+                .slider__stars
+                    +stars(stars)
+                q.slider__quote=quote
+                .item__name=name
+                .item__job=job
+            .item__img
+                +webp(src, ext, '')
+    else
+        .slider__item
+            .item__content
+                .slider__stars
+                    +stars(stars)
+                q.slider__quote=quote
+                .item__name=name
+                .item__job=job
+            .item__img
+                +webp(src, ext, '')
+
+
+mixin stars(stars)
+    while stars > 0
+        .slider__star
+        - stars--

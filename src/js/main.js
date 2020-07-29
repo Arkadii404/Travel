@@ -42,3 +42,6 @@ const dateSelect = new Select('#date', {
         { id: '6', value: 'Nest' }
     ]
 });
+
+const testimonials = new Slider('.testimonials__slider', '.slider__item');
+console.log(testimonials.items)

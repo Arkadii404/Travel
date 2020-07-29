@@ -196,16 +196,16 @@ p {
     }
     &__img {
         width: 260px;
-            img {
-                border-radius: 6px;
-            }
+        img {
+            border-radius: 6px;
+        }
     }
     &__items {
         @include flex;
         flex-wrap: wrap;
     }
     &__item {
-        position: relative;       
+        position: relative;
     }
     &__text {
         position: absolute;
@@ -228,7 +228,6 @@ p {
     }
 }
 
-
 /* APP =======================*/
 .app {
     margin-bottom: 250px;
@@ -245,5 +244,93 @@ p {
     &__text {
         max-width: 450px;
         margin-bottom: 40px;
+    }
+}
+
+/* TESTIMONIALS =======================*/
+.testimonials {
+    margin-bottom: 250px;
+    &__title {
+        margin-bottom: 45px;
+    }
+    &__slider {
+        position: relative;
+        height: 492px;
+    }
+}
+.slider {
+    &__item {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        @include flex;
+        align-items: center;
+        opacity: 0;
+        @include transition(opacity);
+        &.active {
+            opacity: 1;
+        }
+    }
+    &__stars {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    &__star {
+        width: 25px;
+        height: 25px;
+        background-image: url("../img/star.svg");
+        background-size: cover;
+        margin-right: 10px;
+    }
+    &__quote {
+        display: block;
+        font-size: 24px;
+        line-height: 1.5;
+        margin-bottom: 40px;
+    }
+    &__controls {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: #fff;
+        padding: 10px 2px 2px 10px;
+        border-radius: 16px 0px 0px 0px;
+    }
+    &__arrow {
+        background: none;
+        border: none;
+        cursor: pointer;
+        opacity: 0.6;
+        user-select: none;
+        @include transition(opacity);
+        &:hover {
+            opacity: 1;
+        }
+        &.prev {
+            transform: rotate(180deg);
+        }
+    }
+}
+.slider__item {
+    .item {
+        &__content {
+            max-width: 450px;
+            font-family: "Inter", sans-serif;
+        }
+        &__name {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 2;
+        }
+        &__job {
+            font-size: 18px;
+            color: rgba(0, 0, 0, 0.85);
+        }
+        &__img {
+            img {
+                border-radius: 6px;
+            }
+        }
     }
 }

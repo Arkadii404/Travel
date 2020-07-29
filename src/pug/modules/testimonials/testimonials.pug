@@ -3,4 +3,14 @@ section.testimonials
         .testimonials__inner 
             h2.testimonials__title Testimonials
             .testimonials__slider
+                +sliderItem(true, 5, 'Quisque in lacus a urna fermentum euismod. Integer mi nibh, dapibus ac scelerisque eu, facilisis quis purus. Morbi blandit sit amet turpis nec', 'Edward Newgate', 'Founder Circle', 'slider', '.png')
+                +sliderItem(false, 2, 'Quisque a urna fermentum euismod. Integer mi nibh, dapibus ac scelerisque eu, facilisis quis purus. Morbi blandit sit amet turpis nec', 'Edward Newgate', 'Founder Circle', 'slider', '.png')
+                +sliderItem(false, 3, 'Quisque in lacus a urna fermentum euismod. Integer mi nibh, dapibus ac scelerisque eu, facilisis quis purus. Morbi blandit sit amet turpis nec', 'Edward Newgate', 'Founder Circle', 'slider', '.png')
+                +sliderItem(false, 4, 'Quisque in lacus a urna fermentum euismod. Integer mi nibh, dapibus ac scelerisque eu, facilisis quis purus. Morbi blandit sit amet turpis nec', 'Edward Newgate', 'Founder Circle', 'slider', '.png')
+                +sliderItem(false, 1, 'Quisque in euismod. Integer mi nibh, dapibus ac scelerisque eu, facilisis quis purus. Morbi blandit sit amet turpis nec', 'Edward Newgate', 'Founder', 'slider', '.png')
+                .slider__controls
+                    button.slider__arrow.prev
+                        img(src="img/slider-arrow.svg", draggable="false")
+                    button.slider__arrow.next
+                        img(src="img/slider-arrow.svg", draggable="false")
 
