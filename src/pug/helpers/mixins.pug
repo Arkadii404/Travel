@@ -8,3 +8,11 @@ mixin webp(src, ext, alt)
 mixin navItem(url, name, active)
     li.nav__item
         a.nav__link(href=url, class={'nav__item--active': active})= name
+
+mixin destinatioItem(city, country, img, ext, alt)
+    .destinations__item
+        .destinations__img
+            +webp(img, ext, alt)
+        .destinations__text
+            .destinations__city=city
+            .destinations__country=country

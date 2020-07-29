@@ -178,3 +178,52 @@ p {
         margin-bottom: 33px;
     }
 }
+
+/* DESTINATIONS =======================*/
+.destinations {
+    margin-bottom: 230px;
+    &__head {
+        @include flex;
+        margin-bottom: 55px;
+    }
+    &__link {
+        font-weight: 600;
+        color: $button;
+        font-family: "Inter", sans-serif;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__img {
+        width: 260px;
+            img {
+                border-radius: 6px;
+            }
+    }
+    &__items {
+        @include flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        position: relative;       
+    }
+    &__text {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: #fff;
+        border-radius: 0px 6px 0px 0px;
+        padding: 15px 20px 0 0;
+        font-family: "Inter", sans-serif;
+    }
+    &__city {
+        color: #042521;
+        font-weight: 600;
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+    &__country {
+        color: $text;
+        font-size: 14px;
+    }
+}
