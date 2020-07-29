@@ -227,3 +227,23 @@ p {
         font-size: 14px;
     }
 }
+
+
+/* APP =======================*/
+.app {
+    margin-bottom: 250px;
+    &__inner {
+        @include flex;
+    }
+    &__content {
+        margin-top: 115px;
+    }
+    &__title {
+        max-width: 350px;
+        margin-bottom: 20px;
+    }
+    &__text {
+        max-width: 450px;
+        margin-bottom: 40px;
+    }
+}
