@@ -11,5 +11,7 @@ html(lang="en")
         title #{title}
     body
         include ../modules/header
-        block content
-    script(src="js/main.js")
+        main
+            block content
+    script(src="js/Select.js", defer)
+    script(src="js/main.js", defer)

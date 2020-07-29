@@ -14,7 +14,7 @@ let path = {
     src: {
         pug: source_folder + '/pug/*.pug',
         css: source_folder + '/scss/style.scss',
-        js: source_folder + '/js/main.js',
+        js: source_folder + '/js/*.js',
         img: source_folder + '/img/**/*.{jpg,png,svg,ico,gif,webp}',
         fonts: source_folder + '/fonts/*.ttf'
     },
