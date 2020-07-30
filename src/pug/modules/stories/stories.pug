@@ -1,0 +1,13 @@
+- var stories = [{title: 'The many benefits of taking a healing holiday', text: '‘Helaing holidays’ are on the rise tohelp maximise your health and happines...', href: '#', src: 'story1.png'},{title: 'The best Kyoto restaurant to try Japanese food', text: 'From tofu to teahouses, here’s our guide to Kyoto’s best restaurants to visit...', href: '#', src: 'story2.png'},{title: 'Skip Chichen Itza and headto this remote Yucatan', text: 'It’s remote and challenging to get, but braving the jungle and exploring these ruins without the...', href: '#', src: 'story3.png'},{title: 'Surf’s up at these beginner spots around the world', text: 'If learning to surf has in on your to-do list for a while, the good news is: it’s never too late...', href: '#', src: 'story4.png'}]
+
+section.stories
+    .container
+        .stories__inner
+            .stories__head
+                h2.stories__title Trending stories
+                |
+                |
+                a.stories__link(href="#") View all >
+            .stories__items
+                each story in stories
+                    +story(story.title, story.text, story.href, story.src)

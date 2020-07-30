@@ -334,3 +334,57 @@ p {
         }
     }
 }
+
+/* STORIES =======================*/
+.stories {
+    margin-bottom: 250px;
+    &__head {
+        @include flex;
+        margin-bottom: 55px;
+    }
+    &__link {
+        font-weight: 600;
+        color: $button;
+        font-family: "Inter", sans-serif;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__items {
+        @include flex;
+    }
+}
+.stories__items {
+    .story {
+        max-width: 260px;
+        font-family: "Inter", sans-serif;
+        &__img {
+            width: 260px;
+            height: 225px;
+            background-position: top;
+            border-radius: 6px 6px 0 0;
+            margin-bottom: 20px;
+        }
+        &__title {
+            font-size: 18px;
+            line-height: 1.58;
+            margin-bottom: 13px;
+            font-family: inherit;
+        }
+        &__text {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 23px;
+            max-width: 90%;
+        }
+        &__link {
+            color: #FB8F1D;
+            font-size: 15px;
+            line-height: 1.87;
+            font-weight: 600;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

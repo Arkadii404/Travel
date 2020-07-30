@@ -44,3 +44,10 @@ mixin stars(stars)
     while stars > 0
         .slider__star
         - stars--
+
+mixin story(title, text, href, src)
+    .story
+        .story__img(style="background-image: url(img/" + src + ")")
+        h6.story__title=title
+        p.story__text=text
+        a(href=href).story__link Read more

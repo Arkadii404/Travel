@@ -3,21 +3,14 @@ const locationSelect = new Select('#location', {
     data: [
         { id: '1', value: 'React' },
         { id: '2', value: 'Angular' },
-        { id: '3', value: 'Vue' },
-        { id: '4', value: 'React Native' },
-        { id: '5', value: 'Next' },
-        { id: '6', value: 'Nest' }
+        { id: '3', value: 'Vue' }
     ]
 });
 const activitySelect = new Select('#activity', {
     placeholder: 'Activity',
     data: [
         { id: '1', value: 'React' },
-        { id: '2', value: 'Angular' },
-        { id: '3', value: 'Vue' },
-        { id: '4', value: 'React Native' },
-        { id: '5', value: 'Next' },
-        { id: '6', value: 'Nest' }
+        { id: '2', value: 'Angular' }
     ]
 });
 const gradeSelect = new Select('#grade', {
@@ -36,12 +29,8 @@ const dateSelect = new Select('#date', {
     data: [
         { id: '1', value: 'React' },
         { id: '2', value: 'Angular' },
-        { id: '3', value: 'Vue' },
-        { id: '4', value: 'React Native' },
-        { id: '5', value: 'Next' },
-        { id: '6', value: 'Nest' }
+        { id: '3', value: 'Vue' }
     ]
 });
 
 const testimonials = new Slider('.testimonials__slider', '.slider__item');
-console.log(testimonials.items)
