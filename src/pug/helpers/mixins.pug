@@ -3,7 +3,7 @@ mixin webp(src, ext, alt)
         source(type="image/webp", srcset="img/" + src + '.webp')
         |
         |
-        img(src="img/" + src + ext, alt=alt)
+        img(src="img/" + src + ext, alt=alt, loading="lazy")
 
 mixin navItem(url, name, active)
     li.nav__item
@@ -51,3 +51,11 @@ mixin story(title, text, href, src)
         h6.story__title=title
         p.story__text=text
         a(href=href).story__link Read more
+
+mixin footerList(title, items)
+    .footer__list
+        h5.list__title=title
+        ul.list
+            each item in items
+                li.list__item
+                    a(href="#")=item

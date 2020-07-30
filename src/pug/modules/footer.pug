@@ -1,0 +1,32 @@
+footer.footer
+    .container.container--big
+        .footer__inner
+            .footer__info
+                .footer__content
+                    .footer__logo
+                        +webp('logo', '.png', 'logo')
+                    .footer__text. 
+                        Plan and book your perfect trip with 
+                        expert advice, travel tips destination
+                        information from us
+                    .footer__copy ©2020 Thousand Sunny. All rights reserved
+                +footerList('Destinations', ['Africa', 'Antarctica', 'Asia', 'Europe', 'America'])
+                +footerList('Shop', ['Destination Guides', 'Pictorial & Gifts', 'Special Offers', 'Delivery Times', 'FAQs'])
+                +footerList('Interests', ['Adventure Travel', 'Art And Culture', 'Wildlife And Nature', 'Family Holidays', 'Food And Drink'])
+            hr
+            .footer__socialmedia
+                a(href="#")
+                    svg.socialmedia__icon.twitter
+                        use(href="#twitter__logo")
+                a(href="#")
+                    svg.socialmedia__icon.facebook                   
+                        use(href="#facebook__logo")
+                a(href="#")
+                    svg.socialmedia__icon.insta
+                        use(href="#insta__logo")
+                a(href="#")
+                    svg.socialmedia__icon.in
+                        use(href="#in__logo")
+                a(href="#")
+                    svg.socialmedia__icon.youtube
+                        use(href="#youtube__logo")

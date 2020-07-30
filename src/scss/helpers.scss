@@ -21,3 +21,8 @@
 
     transition: $unfoldedTransitions;
 }
+
+@mixin size($width, $heigth) {
+    width: $width + px;
+    height: $heigth + px;
+}
