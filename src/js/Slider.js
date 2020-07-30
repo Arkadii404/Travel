@@ -15,8 +15,8 @@ class Slider {
         this.items = Array.from(this.$childRef);
         this.count = this.items.length;
         
-        document.querySelector('.slider__arrow.prev').addEventListener('click', this.prev)
-        document.querySelector('.slider__arrow.next').addEventListener('click', this.next)
+        document.querySelector('.slider__arrow.prev').addEventListener('click', this.prev);
+        document.querySelector('.slider__arrow.next').addEventListener('click', this.next);
     }
 
     next = () => {

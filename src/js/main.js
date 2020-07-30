@@ -1,4 +1,4 @@
-const locationSelect = new Select('#location', {
+new Select('#location', {
     placeholder: 'Location',
     data: [
         { id: '1', value: 'React' },
@@ -6,14 +6,14 @@ const locationSelect = new Select('#location', {
         { id: '3', value: 'Vue' }
     ]
 });
-const activitySelect = new Select('#activity', {
+new Select('#activity', {
     placeholder: 'Activity',
     data: [
         { id: '1', value: 'React' },
         { id: '2', value: 'Angular' }
     ]
 });
-const gradeSelect = new Select('#grade', {
+new Select('#grade', {
     placeholder: 'Grade',
     data: [
         { id: '1', value: 'React' },
@@ -24,7 +24,7 @@ const gradeSelect = new Select('#grade', {
         { id: '6', value: 'Nest' }
     ]
 });
-const dateSelect = new Select('#date', {
+new Select('#date', {
     placeholder: 'Date',
     data: [
         { id: '1', value: 'React' },
@@ -33,4 +33,4 @@ const dateSelect = new Select('#date', {
     ]
 });
 
-const testimonials = new Slider('.testimonials__slider', '.slider__item');
+new Slider('.testimonials__slider', '.slider__item');

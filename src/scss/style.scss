@@ -39,7 +39,7 @@ p {
 }
 
 hr {
-    background-color: #C4C4C4;
+    background-color: #c4c4c4;
     border: none;
     height: 1px;
     width: 100%;
@@ -359,6 +359,7 @@ hr {
     }
     &__items {
         @include flex;
+        flex-wrap: wrap;
     }
 }
 .stories__items {
@@ -465,13 +466,13 @@ hr {
         &.insta {
             @include size(22, 22);
             &:hover {
-                fill: purple;
+                fill: rgb(133, 26, 175);
             }
         }
         &.in {
             @include size(22, 23);
             &:hover {
-                fill: grey;
+                fill: blue;
             }
         }
         &.youtube {
@@ -479,6 +480,188 @@ hr {
             &:hover {
                 fill: red;
             }
+        }
+    }
+}
+
+/* MEDIA =======================*/
+@media (max-width: 1500px) {
+    .intro__img {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1255px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .intro {
+        &__img {
+            img {
+                max-width: 550px;
+            }
+        }
+        &__content {
+            margin-top: 40px;
+        }
+    }
+    .explore {
+        &__img {
+            margin-left: 0;
+            img {
+                max-width: 500px;
+            }
+        }
+        &__content {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    .destinations,
+    .stories {
+        &__items {
+            justify-content: center;
+        }
+        &__item {
+            margin: 10px;
+        }
+    }
+    .stories {
+        .story {
+            margin: 10px;
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .intro {
+        &__img {
+            img {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+        }
+        &__inner {
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__content {
+            margin-top: 0;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .explore,
+    .app {
+        &__inner {
+            flex-direction: column;
+        }
+        &__content {
+            margin-top: 0;
+            margin-bottom: 30px;
+            max-width: 100%;
+        }
+        &__text,
+        &__title {
+            max-width: 100%;
+        }
+        &__img {
+            img {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .explore__inner {
+        flex-direction: column-reverse;
+    }
+
+    .intro,
+    .explore,
+    .destinations,
+    .app,
+    .testimonials,
+    .stories {
+        margin-bottom: 100px;
+    }
+    .footer__content {
+        display: none;
+    }
+    .intro {
+        &__title {
+            margin-bottom: 30px;
+            max-width: 100%;
+        }
+        .finder {
+            &__title {
+                &::after {
+                    margin-bottom: 20px;
+                }
+            }
+            &__options {
+                .select {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .nav__list {
+        display: none;
+    }
+    .testimonials__slider {
+        height: 400px;
+        .item__img {
+            display: none;
+        }
+        .item__content {
+            max-width: 100%;
+        }
+    }
+    .slider {
+        &__controls {
+            width: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .footer {
+        &__info {
+            flex-direction: column;
+        }
+        &__list {
+            margin-bottom: 30px;
+        }
+        .list__title {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .nav {
+        .button {
+            margin: 0;
+            padding: 7px 20px;
+        }
+    }
+    .destination, .stories {
+        &__title {
+            font-size: 24px;
         }
     }
 }
