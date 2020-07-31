@@ -42,3 +42,41 @@ window.onload = () => {
       document.body.classList.remove('loaded_hiding');
     }, 700);
 }
+
+const controller = new ScrollMagic.Controller();
+
+new ScrollMagic.Scene({
+    triggerElement: '.explore',
+})
+.setClassToggle('.explore', 'fade-in')
+.addTo(controller);
+
+new ScrollMagic.Scene({
+    triggerElement: '.app',
+})
+.setClassToggle('.app', 'fade-in')
+.addTo(controller);
+
+new ScrollMagic.Scene({
+    triggerElement: '.testimonials',
+})
+.setClassToggle('.testimonials', 'fade-in')
+.addTo(controller);
+
+new ScrollMagic.Scene({
+    triggerElement: '.stories__items',
+})
+.setClassToggle('.stories__items', 'fade-in')
+.addTo(controller);
+
+new ScrollMagic.Scene({
+    triggerElement: '.destinations__items',
+})
+.setClassToggle('.destinations__items', 'fade-in')
+.addTo(controller);
+
+new ScrollMagic.Scene({
+    triggerElement: '.header',
+})
+.setClassToggle('.header', 'fade-in')
+.addTo(controller);

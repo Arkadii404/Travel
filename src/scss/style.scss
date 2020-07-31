@@ -14,10 +14,22 @@
 
 body {
     font-family: "Mulish", sans-serif;
+    overflow-x: hidden;
     &.loaded {
         .loader__wrap {
             display: none;
         }
+    }
+    &::-webkit-scrollbar {
+        width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $button;
+        border: 2px solid #f1f1f1;
+        border-radius: 10px;
     }
 }
 
@@ -84,6 +96,11 @@ hr {
     }
 }
 
+::selection {
+    color: #fff;
+    background-color: $button;
+}
+
 /* LOADER =======================*/
 .loader {
     margin: auto;
@@ -106,7 +123,7 @@ hr {
 }
 
 body.loaded_hiding {
-    .preloader__wrap {
+    .loader__wrap {
         transition: 0.3s opacity;
         opacity: 0;
     }
@@ -126,6 +143,17 @@ body.loaded_hiding {
     margin-top: 45px;
     margin-bottom: 75px;
     font-family: "Inter", sans-serif;
+    .container {
+        opacity: 0;
+        transform: scale(0.2);
+        transition: all $fadeDuration ease-out;
+    }
+    &.fade-in {
+        .container {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
     &__inner {
         @include flex;
     }
@@ -210,6 +238,13 @@ body.loaded_hiding {
 /* EXPLORE =======================*/
 .explore {
     margin-bottom: 260px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all $fadeDuration ease-out;
+    &.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
     &__inner {
         @include flex;
     }
@@ -230,7 +265,7 @@ body.loaded_hiding {
 
 /* DESTINATIONS =======================*/
 .destinations {
-    margin-bottom: 230px;
+    margin-bottom: 250px;
     &__head {
         @include flex;
         margin-bottom: 55px;
@@ -252,6 +287,13 @@ body.loaded_hiding {
     &__items {
         @include flex;
         flex-wrap: wrap;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: all 0.5s ease-in;
+        &.fade-in {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
     &__item {
         position: relative;
@@ -280,6 +322,13 @@ body.loaded_hiding {
 /* APP =======================*/
 .app {
     margin-bottom: 250px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all $fadeDuration ease-out;
+    &.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
     &__inner {
         @include flex;
     }
@@ -299,6 +348,13 @@ body.loaded_hiding {
 /* TESTIMONIALS =======================*/
 .testimonials {
     margin-bottom: 250px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all $fadeDuration ease-out;
+    &.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
     &__title {
         margin-bottom: 45px;
     }
@@ -405,6 +461,13 @@ body.loaded_hiding {
     }
 }
 .stories__items {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease-in;
+    &.fade-in {
+        opacity: 1;
+        transform: translateX(0);
+    }
     .story {
         max-width: 260px;
         font-family: "Inter", sans-serif;
