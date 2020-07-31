@@ -14,6 +14,11 @@
 
 body {
     font-family: "Mulish", sans-serif;
+    &.loaded {
+        .loader__wrap {
+            display: none;
+        }
+    }
 }
 
 h1,
@@ -76,6 +81,43 @@ hr {
     margin: 0 auto;
     &.container--big {
         max-width: 1220px;
+    }
+}
+
+/* LOADER =======================*/
+.loader {
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    background-color: $button;
+    border-radius: 50%;
+    animation: loader 2s infinite;
+
+    &__wrap {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9999999;
+        background-color: #fff;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+    }
+}
+
+body.loaded_hiding {
+    .preloader__wrap {
+        transition: 0.3s opacity;
+        opacity: 0;
+    }
+}
+
+@keyframes loader {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(2);
     }
 }
 
@@ -659,7 +701,8 @@ hr {
             padding: 7px 20px;
         }
     }
-    .destination, .stories {
+    .destination,
+    .stories {
         &__title {
             font-size: 24px;
         }
